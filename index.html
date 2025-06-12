@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Iframe Host</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        padding: 1rem;
+        background-color: #00466e;
+        color: white;
+        text-align: center;
+      }
+
+      .iframe-wrapper {
+        flex: 1;
+        border-top: 2px solid #ccc;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Payment Request Sample</h1>
+        <p>
+          This iframe is embedded below to demonstrate the Stitch payment flow.
+        </p>
+      </header>
+
+      <div class="iframe-wrapper">
+        <iframe
+          src="https://secure.stitch.money/connect/payment-request/a78b34de-07cc-42b2-9de0-8cdddd1af54c?redirect_uri=https://localhost:8000/return"
+          allow="payment"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>
