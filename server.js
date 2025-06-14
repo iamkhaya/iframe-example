@@ -10,7 +10,7 @@ app.use((req, res, next) => {
     "Permissions-Policy",
     'payment=(self "https://secure.stitch.money")'
   );
-  res.setHeader("Content-Security-Policy", "frame-ancestors 'none';");
+
   next();
 });
 
